@@ -101,6 +101,7 @@ function endGame() {
     GAME.removeChild(rock);
     ROCKS.shift();
   });
+  removeRocks();
   window.removeEventListener("keydown", moveDodger);
   alert("YOU LOSE!");
 }

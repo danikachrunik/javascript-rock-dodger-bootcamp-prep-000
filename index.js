@@ -74,8 +74,7 @@ function createRock(x) {
       } else if (top < GAME_HEIGHT) {
         window.requestAnimationFrame(step);
       } else {
-        GAME.removeChild(rock);
-        ROCKS.shift();
+        removeRock(rock);
       }
     }
     window.requestAnimationFrame(step);  

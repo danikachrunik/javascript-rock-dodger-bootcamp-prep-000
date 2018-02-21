@@ -93,6 +93,7 @@ function endGame() {
   var rocks = document.getElementsByClassName('rock');
   while(rocks[0]) {
     GAME.removeChild(rocks[0]);
+    ROCKS.shift();
   }
   window.removeEventListener("keydown", moveDodger);
   alert("YOU LOSE!");

@@ -211,16 +211,16 @@ describe('Rock Dodger', () => {
         moveDodger(e);
 
         expect(spy).toHaveBeenCalled();
-      })
+      });
 
       it('calls moveDodgerLeft()', () => {
-        const f = expect.spyOn(window, 'moveDodgerLeft')
+        const f = expect.spyOn(window, 'moveDodgerLeft');
 
-        moveDodger(e)
+        moveDodger(e);
 
-        expect(f).toHaveBeenCalled()
+        expect(f).toHaveBeenCalled();
 
-        window.moveDodgerLeft.restore()
+        window.moveDodgerLeft.restore();
       })
     })
 
@@ -300,19 +300,19 @@ describe('Rock Dodger', () => {
     })
 
     it('moves the DODGER to the right', () => {
-      const left = positionToInteger(dodger.style.left)
+      const left = positionToInteger(dodger.style.left);
 
-      moveDodgerRight()
+      moveDodgerRight();
 
-      expect(positionToInteger(dodger.style.left)).toBeGreaterThan(left)
+      expect(positionToInteger(dodger.style.left)).toBeGreaterThan(left);
     })
 
     it('does not move the DODGER left if the DODGER\'s right edge already touches the right edge of GAME', () => {
-      dodger.style.left = '360px'
+      dodger.style.left = '360px';
 
-      moveDodgerRight()
+      moveDodgerRight();
 
-      expect(dodger.style.left).toEqual('360px')
+      expect(dodger.style.left).toEqual('360px');
     })
   })
 })

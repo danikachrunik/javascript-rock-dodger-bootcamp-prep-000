@@ -91,7 +91,7 @@ function createRock(x) {
 function removeRocks() {
   var rocks = document.getElementsByClassName('rock');
   while(rocks[0]) {
-    GAME.removeChild(rock);
+    GAME.removeChild(rocks[0]);
   }
 }
 

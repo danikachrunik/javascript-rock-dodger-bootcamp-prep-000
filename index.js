@@ -88,6 +88,13 @@ function createRock(x) {
   return rock;
 }
 
+function removeRocks() {
+  var rocks = document.getElementsByClassName('rock');
+  while(rocks[0]) {
+    GAME.removeChild(rock);
+  }
+}
+
 function endGame() {
   clearInterval(gameInterval);
   ROCKS.forEach(function(rock){
